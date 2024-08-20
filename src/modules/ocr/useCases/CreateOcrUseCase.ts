@@ -14,10 +14,6 @@ export class CreateOcrUseCase {
       const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
       const secretAccessKey = process.env.AWS_SECRET_KEY;
 
-      console.log(process.env.JWT_SECRET);
-      console.log('accessKeyId', accessKeyId);
-      console.log('secretAccessKey', secretAccessKey);
-
       if (!accessKeyId || !secretAccessKey) {
         console.log('AWS credentials are not set');
         throw new Error('AWS credentials are not set');

@@ -8,6 +8,8 @@ import { SignInDTOMiddleware } from './middleware/signInDTO.middleware';
 import { SignInUseCase } from 'src/modules/auth/useCases/signInUseCase';
 import { JwtModule } from '@nestjs/jwt';
 import { JwtStrategy } from 'src/modules/auth/strategies/jwt.strategy';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 @Module({
   controllers: [AuthController],
